@@ -19,5 +19,5 @@
 
 
 <div align='center'>
-![656363bb76165d74303b2413](https://github.com/mersad98/car-rental/assets/141646504/b9561ee4-a852-43be-ac3f-3bc0119d5a33)
+<img src='https://github.com/mersad98/car-rental/assets/141646504/b9561ee4-a852-43be-ac3f-3bc0119d5a33'
 </div>
