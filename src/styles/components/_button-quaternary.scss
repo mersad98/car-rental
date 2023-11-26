@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.btn-quaternary {
+  font-family: $titles-font;
+  font-size: 2rem;
+  font-weight: 600;
+  border: 0;
+  background-color: $light-gray;
+  padding: 1.5rem 2.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover,
+  &.active {
+    background-color: $text-orange;
+    color: #ffffff;
+  }
+}

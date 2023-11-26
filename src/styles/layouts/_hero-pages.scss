@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.hero-pages {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(#ffffff, 0.8),
+      rgba(#ffffff, 0.8)
+    ),
+    url("../../src/images/hero/heroes-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  height: 36rem;
+  margin-top: -10.5rem;
+
+  &__content {
+    padding-top: 16rem;
+
+    &__text {
+      font-size: $p-size;
+      font-weight: 500;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}

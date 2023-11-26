@@ -1,0 +1,192 @@
+@use "../abstracts/" as *;
+
+.footer {
+  text-align: center;
+  padding-top: 10rem;
+
+  @include screen(lg) {
+    text-align: left;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid $light-gray;
+    padding-bottom: 8rem;
+
+    @include screen(lg) {
+      grid-template-columns: 2fr 1fr 1.5fr;
+      column-gap: 3rem;
+    }
+
+    @include screen(xlg) {
+      grid-template-columns: 2fr 1fr 1.5fr 1.7fr;
+    }
+  }
+
+  &__heading {
+    font-size: $p-size;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+
+    span {
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    font-size: $button-size;
+
+    li:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        color: $text-orange;
+      }
+    }
+
+    span {
+      color: $text-gray;
+    }
+  }
+
+  &__contact {
+    grid-column: span 2;
+    margin-bottom: 5rem;
+
+    @include screen(lg) {
+      grid-column: 1;
+    }
+
+    h2 {
+      font-size: $h4-size;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      @include screen(lg) {
+        align-items: start;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 1.5rem;
+        text-decoration: none;
+
+        &:link,
+        &:visited {
+          color: inherit;
+          font-size: $p-size;
+          transition: all 0.2s;
+        }
+
+        &:hover,
+        &:active {
+          color: $text-orange;
+        }
+      }
+    }
+  }
+
+  &__company {
+    margin-bottom: 5rem;
+  }
+
+  &__subscription {
+    grid-column: span 2;
+
+    @include screen(lg) {
+      grid-column: span 2;
+    }
+
+    @include screen(xlg) {
+      grid-column: 4;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      &--input {
+        background-color: $light-gray;
+        font-family: inherit;
+        color: $text-gray;
+        font-size: $input-size;
+        border: 0;
+        border-radius: 3px;
+        width: 100%;
+        padding: 2rem 6rem;
+        transition: all 0.3s;
+
+        @include screen(m) {
+          width: 70%;
+          margin-inline: auto;
+        }
+
+        @include screen(lg) {
+          padding-inline: 1rem;
+          margin: 0;
+        }
+
+        @include screen(xlg) {
+          width: 100%;
+        }
+
+        &:focus-visible {
+          outline: 1px solid rgba($light-orange, 0.8);
+        }
+
+        &::placeholder {
+          color: rgba($text-gray, 0.5);
+        }
+      }
+
+      &--btn {
+        width: 100%;
+
+        @include screen(m) {
+          width: 70%;
+          margin-inline: auto;
+        }
+
+        @include screen(lg) {
+          margin: 0;
+        }
+
+        @include screen(xlg) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: $input-size;
+    text-transform: capitalize;
+    margin-block: 2rem;
+  }
+}

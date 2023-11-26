@@ -1,0 +1,22 @@
+@mixin screen($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 30em) {
+      @content;
+    }
+  }
+  @if $breakpoint == m {
+    @media (min-width: 35em) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: 45em) {
+      @content;
+    }
+  }
+  @if $breakpoint == xlg {
+    @media (min-width: 64em) {
+      @content;
+    }
+  }
+}

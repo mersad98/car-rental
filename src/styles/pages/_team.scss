@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+
+.members {
+  margin-block: 10rem;
+
+  &__grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    row-gap: 4rem;
+
+    @include screen(lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include screen(xlg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__member {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 2rem;
+    border-radius: 3px;
+    box-shadow: $container-shadow;
+
+    @include screen(lg) {
+      max-width: 30rem;
+    }
+
+    &__desc {
+      padding: 0 2rem 4rem;
+    }
+  }
+}

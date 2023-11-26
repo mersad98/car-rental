@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.banner-pages {
+  background-image: linear-gradient(rgba(#000, 0.6), rgba(#000, 0.6)),
+    url("../../src/images/banners/book-banner.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  text-align: center;
+
+  &__content {
+    padding: 4rem;
+
+    &--title {
+      color: #ffffff;
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      color: #ffffff;
+
+      span {
+        &:first-child {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-size: $h4-size;
+          align-self: start;
+
+          @include screen(lg) {
+            align-self: center;
+          }
+        }
+
+        &:last-child {
+          color: $text-orange;
+          font-size: $h1-size;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

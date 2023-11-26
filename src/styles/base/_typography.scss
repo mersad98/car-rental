@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $text-font;
+  color: $text-black;
+  background-color: $bg-white;
+
+  ::selection {
+    background-color: rgba($light-orange, 0.8);
+    color: #ffffff;
+  }
+}
+
+.heading-primary {
+  font-family: $titles-font;
+  font-size: $h1-size;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 2rem;
+
+  @include screen(lg) {
+    font-size: $xl-size;
+  }
+}
+
+.heading-secondary {
+  font-family: $titles-font;
+  font-size: $h1-size;
+  font-weight: 700;
+  letter-spacing: -1.3px;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+
+  @include screen(lg) {
+    font-size: $h2-size;
+  }
+}
+
+.heading-tertiary {
+  font-family: $titles-font;
+  font-size: $h3-size;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.heading-quaternary {
+  font-size: $h4-size;
+  font-weight: 500;
+  letter-spacing: -0.65px;
+  margin-bottom: 0.8rem;
+}
+
+.paragraph {
+  font-size: $p-size;
+  color: $text-gray;
+  line-height: 1.6;
+  margin-block: 1rem;
+}

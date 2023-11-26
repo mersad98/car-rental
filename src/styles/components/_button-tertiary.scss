@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.btn-tertiary {
+  &:link,
+  &:visited {
+    color: #ffffff;
+    background-color: $btn-black;
+    font-size: $button-size;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 1.8rem 5.2rem;
+    transition: all 0.5s;
+  }
+
+  &:hover,
+  &:active {
+    color: $text-orange;
+    background-color: #ffffff;
+    outline: 1px solid $text-orange;
+  }
+}

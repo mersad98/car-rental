@@ -1,0 +1,98 @@
+@use "../abstracts/" as *;
+
+.contact-form {
+  background-image: url("../../src/images/contact/bg-contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-block: 10rem;
+
+  @include screen(lg) {
+    text-align: left;
+    background-position: center;
+  }
+
+  @include screen(xlg) {
+    background-size: 70%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-block: 3rem 6rem;
+
+    @include screen(lg) {
+      align-items: start;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: $p-size;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    div {
+      width: 100%;
+
+      label {
+        display: inline-block;
+        font-size: $p-size;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+
+        span {
+          color: red;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 10rem;
+        max-height: 40rem;
+      }
+
+      input,
+      textarea {
+        background-color: $light-gray;
+        font-family: inherit;
+        color: $text-gray;
+        font-size: $input-size;
+        border: 0;
+        border-radius: 3px;
+        padding: 2rem 3rem;
+        width: 100%;
+        transition: all 0.3s;
+
+        &:focus-visible {
+          outline: 1px solid rgba($light-orange, 0.8);
+        }
+
+        &::placeholder {
+          color: rgba($text-gray, 0.5);
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 600;
+      padding-inline: 2rem;
+
+      @include screen(lg) {
+        align-self: start;
+      }
+    }
+  }
+}

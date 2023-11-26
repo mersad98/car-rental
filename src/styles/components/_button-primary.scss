@@ -1,0 +1,36 @@
+@use "../abstracts/" as *;
+
+.btn-primary {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: $button-size;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    padding: 1.5rem 3rem;
+    background-image: linear-gradient(
+      to right,
+      $text-orange,
+      $light-orange,
+      $bg-white,
+      #f3806f
+    );
+    background-size: 300% 100%;
+    box-shadow: $button-shadow;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover,
+  &:active {
+    background-image: linear-gradient(
+      to right,
+      $text-orange,
+      $bg-white,
+      $light-orange,
+      $light-orange
+    );
+    background-position: 100% 0;
+  }
+}

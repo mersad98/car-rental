@@ -1,0 +1,167 @@
+@use "../abstracts/" as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+  background-color: transparent;
+  max-width: 113rem;
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+
+  &__logo-container {
+    width: 14.5rem;
+
+    &__img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include screen(xlg) {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      list-style: none;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        font-size: $button-size;
+        font-weight: 500;
+        color: inherit;
+        transition: all 0.2s;
+      }
+
+      &:hover,
+      &:active {
+        color: $text-orange;
+      }
+    }
+  }
+
+  &__buttons {
+    display: none;
+
+    @include screen(lg) {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      order: 1;
+    }
+
+    &--sign-in {
+      text-decoration: none;
+      color: inherit;
+      font-size: $button-size;
+      font-weight: 500;
+    }
+  }
+
+  &__mobile-toggle {
+    height: 3.2rem;
+    aspect-ratio: 1;
+    margin-left: 40%;
+
+    @include screen(xlg) {
+      display: none;
+    }
+
+    &__icon {
+      display: block;
+      height: 100%;
+      width: 100%;
+      color: inherit;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $text-orange;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  background-color: $bg-white;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+
+  @include screen(xlg) {
+    display: none;
+  }
+
+  &__icon {
+    display: block;
+    height: 3.2rem;
+    width: 3.2rem;
+    color: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $text-orange;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    a {
+      &:link,
+      &:visited {
+        display: block;
+        text-decoration: none;
+        font-family: $titles-font;
+        font-size: $h4-size;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:not(.btn-primary) {
+          color: inherit;
+        }
+      }
+
+      &:hover:not(.btn-primary),
+      &:active:not(.btn-primary) {
+        color: $text-orange;
+      }
+    }
+  }
+}
+
+.open-nav {
+  transform: translateX(0);
+}
+
+.mobile-login {
+  display: block !important;
+
+  @include screen(lg) {
+    display: none !important;
+  }
+}

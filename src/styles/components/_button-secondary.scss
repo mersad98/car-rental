@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.btn-secondary {
+  background-image: linear-gradient(to right, $light-orange, $text-orange);
+  font: inherit;
+  font-size: $p-size;
+  border: 0;
+  border-radius: 0.3rem;
+  padding-block: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: $button-shadow;
+  transition: all 0.5s;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 3px 10px 0 $light-orange;
+  }
+}

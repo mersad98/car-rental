@@ -1,0 +1,88 @@
+@use "../abstracts/" as *;
+
+.vehicles {
+  padding-block: 10rem;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 3px;
+    width: 90%;
+    height: 100%;
+    box-shadow: $container-shadow;
+    margin-inline: auto;
+
+    &__img {
+      display: block;
+      margin-inline: auto;
+      width: 90%;
+      height: 100%;
+      border-radius: 3px;
+    }
+
+    &__info {
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      grid-row: 1fr 1fr;
+      column-gap: 1rem;
+      padding: 2rem 1rem;
+
+      @include screen(lg) {
+        padding-inline: 2rem;
+      }
+
+      &--title {
+        font-size: $h4-size;
+
+        @include screen(lg) {
+          font-size: 1.8rem;
+        }
+      }
+
+      &--price {
+        justify-self: end;
+
+        h3 {
+          @include screen(lg) {
+            font-size: $p-size;
+          }
+          span {
+            font-size: $p-size;
+          }
+        }
+
+        p {
+          font-size: $p-size;
+          color: $text-gray;
+          line-height: 1;
+        }
+      }
+
+      &--desc {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        p {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          svg {
+            color: $text-black;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 1rem;
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+    }
+  }
+}
