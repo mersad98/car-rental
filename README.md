@@ -2,7 +2,7 @@
 
 Car Rental is a convenient online platform that allows users to rent cars for personal or business use. The website provides an easy-to-use interface for searching, comparing, and reserving cars from a wide selection of vehicles.
 
-Credits for the design go to: <a href='https://xpeedstudio.com/' target="_blank">XpeedStudio</a>
+Credits for the design go to: <a href='https://xpeedstudio.com/'>XpeedStudio</a>
 
 ## Tech Stack
 
